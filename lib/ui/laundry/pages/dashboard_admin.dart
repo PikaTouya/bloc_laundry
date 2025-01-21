@@ -101,7 +101,7 @@ class _DashboardAdminWidgetState extends State<DashboardAdminWidget> {
                       ),
                       const SizedBox(width: 16),
                       Text(
-                        'My Orders',
+                        'Orders',
                         style: TextStyle(
                           color: const Color(0xFF9489F5), // Warna teks My Orders
                           fontSize: 16,
