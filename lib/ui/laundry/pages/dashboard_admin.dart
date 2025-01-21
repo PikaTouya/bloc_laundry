@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'orders_admin.dart'; // Import halaman OrdersAdminWidget
 import 'add_order.dart';   // Import halaman AddOrderWidget
+import 'login_page.dart';
 
 class DashboardAdminWidget extends StatefulWidget {
   const DashboardAdminWidget({Key? key}) : super(key: key);
@@ -22,6 +23,10 @@ class _DashboardAdminWidgetState extends State<DashboardAdminWidget> {
             icon: const Icon(Icons.logout),
             onPressed: () {
               // Logout logic here
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => LoginPageWidget()),
+              );
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(content: Text('Logged out')),
               );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'orders_user.dart'; // Pastikan file ini diimpor
+import 'login_page.dart';
 
 class DashboardUserWidget extends StatefulWidget {
   const DashboardUserWidget({Key? key}) : super(key: key);
@@ -21,6 +22,10 @@ class _DashboardUserWidgetState extends State<DashboardUserWidget> {
             icon: const Icon(Icons.logout),
             onPressed: () {
               // Logout logic here
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => LoginPageWidget()),
+              );
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(content: Text('Logged out')),
               );
