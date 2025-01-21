@@ -46,14 +46,12 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
       final email = _emailController.text;
       final password = _passwordController.text;
 
-      // Simulate a login process by checking the email and password in the "database"
       final user = _userDatabase.firstWhere(
             (user) => user["email"] == email && user["password"] == password,
         orElse: () => {},
       );
 
       if (user.isNotEmpty) {
-        // Navigate to the appropriate dashboard based on the user's role
         if (user["role"] == "admin") {
           Navigator.pushReplacement(
             context,
